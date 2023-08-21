@@ -295,11 +295,6 @@
           "resourceRequests": {
             "cpu": "1",
             "memory": "2Gi"
-          },
-          "environmentVariables": {
-            "SPRING_DATASOURCE_URL": "[parameters('datasourceUrl')]",
-            "SPRING_DATASOURCE_USERNAME": "[parameters('databaseUsername')]",
-            "SPRING_DATASOURCE_PASSWORD": "[parameters('databasePassword')]"
           }
         },
         "source": {
@@ -329,7 +324,7 @@
     },
     "uri": {
       "type": "string",
-      "value": "[format('https://{0}', reference(resourceId('Microsoft.AppPlatform/Spring/apps', parameters('asaInstanceName'), parameters('appName')), '2021-09-01-preview').url)]"
+      "value": "[format('https://{0}', reference(resourceId('Microsoft.AppPlatform/Spring/apps', parameters('asaInstanceName'), parameters('appName')), '2023-05-01-preview').url)]"
     }
   }
 }
